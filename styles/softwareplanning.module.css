@@ -1,0 +1,55 @@
+.sp__box_main{
+    margin-top: 6rem ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background: white;
+}
+.sp__box_mainText span{
+    color: blue;
+}
+
+.sp__main{
+    margin-top: 5rem;
+    display: flex;
+    justify-content: space-around;
+}
+@media screen and (max-width: 700px) {
+    .sp__main{
+        flex-direction: column;
+        margin: auto;
+        max-width: 80%;
+    }
+  }
+
+.sp__div1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 250px;
+}
+.sp__div1 p{
+    font-size: 15px;
+    line-height: 1.8;
+}
+.sp__div2{
+    display: flex;
+    max-width: 250px;
+    flex-direction: column;
+    justify-content: center;
+}
+.sp__div2 p{
+    font-size: 15px;
+    line-height: 1.8;
+}
+.sp__div3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 250px;
+}
+.sp__div3 p{
+    font-size: 15px;
+    line-height: 1.8;
+}
