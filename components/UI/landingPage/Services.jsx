@@ -9,7 +9,7 @@ const SERVICES = [
         service: "Automatic Optimization"
     },
     {
-        service: "Applicatication Services"
+        service: "Application Services"
     },
     {
         service: "Data Analytics"

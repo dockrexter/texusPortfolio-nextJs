@@ -15,7 +15,7 @@
     justify-content: space-evenly;
 
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
     .nav__wrapper{
         display: none;
     }

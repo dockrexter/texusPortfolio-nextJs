@@ -15,12 +15,6 @@
     display: flex;
     justify-content: space-around;   
     }
-
-@media screen and (max-width: 700px) {
-        .hero__main {
-            display: none;
-        }
-      }
 .hero__text{
     max-width: 550px;
     margin: 16rem 0 2rem 0;

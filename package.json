@@ -40,6 +40,7 @@
     "three": "^0.144.0",
     "tsparticles": "^2.3.2",
     "typeface-dm-sans": "^1.1.13",
+    "typewriter-effect": "^2.19.0",
     "vanta": "^0.5.24"
   },
   "devDependencies": {

@@ -37,6 +37,7 @@ const Header = () => {
   const [color, setColor] = useState('transperant');
   const [textColor, setTextColor] = useState('white');
   const [shadow, setShadow]= useState('');
+  const [logo, setLogo] = useState('/texuslogoWhite.png');
 
   useEffect(()=>{
     const changeColor = () =>{
@@ -44,10 +45,13 @@ const Header = () => {
       setColor('#ffffff');
       setTextColor('#000000')
       setShadow('rgba(0, 0, 0, 0.24) 0px 3px 8px');
+      setLogo('/texusLogo.png');
     }else{
       setColor('transparent');
-      setTextColor('white')
+      setTextColor('white');
       setShadow("");
+      setLogo('/texuslogoWhite.png');
+      
       
     }};
     window.addEventListener('scroll', changeColor);
@@ -58,7 +62,7 @@ const Header = () => {
     className={`${classes.header}`}>
       <Container>
         <div className={`${classes.nav__wrapper}`}>
-            <img src='/texusLogo.png' alt="texus" width="15%" height="auto"/>
+            <img src={logo} alt="texus" width="15%" height="auto"/>
             <div className={`${classes.nav__menu}`}>
               {NAV_LINK.map((item,index)=>(
                 <div key={index}>

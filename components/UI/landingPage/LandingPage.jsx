@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import classes from '../../../styles/landingPage.module.css'
 import * as THREE from 'three'
 import GLOBE from 'vanta/dist/vanta.globe.min.js'
+import Typewriter from 'typewriter-effect'
 
 
 const LandingPage = () => {
@@ -24,30 +25,23 @@ const LandingPage = () => {
       
       <div className={`${classes.hero__main}`}>
         <div className={`${classes.hero__text}`}>
-          <h1>Big Data And Analytics</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+          <h1>Work in every single aspect of{" "}</h1>
+          <h1 style={{color:"#00b0ee"}}><Typewriter
+          style={{color: "blue"}}
+          options={{
+            strings: ['SDLC.', 'Inovation.'],
+            autoStart: true,
+            loop: true,
+          }}
+            // onInit={(typewriter)=>{
+            //   typewriter.typeString("SDLC.").pauseFor(2000).deleteAll().typeString("Inovation.").start();
+            // }}
+          /></h1>
+          
+            <p>Texus is a family of Gold class Software Engineers</p>
             <button>Estimate Project</button>
         </div>
-        <div className={`${classes.hero__image__main}`} >
-          {/* <div className={`${classes.hero__image1}`}>
-            <img src='/home-two-shape.png' alt="texus" width="100%" height="auto"/>
-          <div className={`${classes.hero__image2}`}>
-            <img src='/homeshape_all.png' alt="me" width="85%" height="auto"/>
-          </div>
-          </div> */}
-          
-          {/* <div className={`${classes.hero__image3}`}>
-            <img src='/home-two-shape3.png' alt="me" width="100%" height="auto"/>
-          </div>
-          <div className={`${classes.hero__image4}`}>
-            <img src='/home-two-shape4.png' alt="me" width="100%" height="auto"/>
-          </div>
-          <div className={`${classes.hero__image5}`}>
-            <img src='/home-two-shape1.png' alt="me" width="100%" height="auto"/>
-          </div>
-          <div className={`${classes.hero__image6}`}>
-            <img src='/home-two-shape6.png' alt="me" width="100%" height="auto"/>
-          </div> */}
+          <div className={`${classes.hero__image__main}`} >
         </div>
       </div>
     </div>
