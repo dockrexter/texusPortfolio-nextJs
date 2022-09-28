@@ -3,9 +3,9 @@ import {BsFacebook} from 'react-icons/bs'
 import {AiFillTwitterCircle, AiFillInstagram} from 'react-icons/ai'
 import {ImLinkedin} from 'react-icons/im'
 import Link from 'next/link'
-import classes from './footer.module.css'
+import classes from './Footer.module.css'
 
-const Footers = () => {
+const Footer = () => {
   return (
     <footer className={`${classes.footer}`}>
       <div className={`${classes.footer_container}`}>
@@ -105,4 +105,4 @@ const Footers = () => {
   )
 }
 
-export default Footers
+export default Footer
