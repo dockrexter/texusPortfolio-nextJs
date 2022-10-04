@@ -39,6 +39,9 @@ setFilterWork(works.filter((work) => work.tags.includes(item)));
 return (
 <div className={`${classes.work__main}`}>
 <h1>Products</h1>
+<hr style={{ borderTop: "3px solid #008bc9",
+  width: "100px",
+  margin: "1rem auto auto auto"}}/>
 
 <div className={`${classes.app__work_filter}`}>
 {['UI/UX', 'Web App', 'Mobile App', 'React JS', 'All'].map((item, index) => (

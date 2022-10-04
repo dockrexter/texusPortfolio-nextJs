@@ -32,6 +32,9 @@ const Services = () => {
   return (
         <div className={`${classes.service}`} id='services'>
             <h1>Services</h1>
+            <hr style={{ borderTop: "3px solid #008bc9",
+                width: "100px",
+                margin: "1rem auto auto auto"}}/>
             <div className={`${classes.service__main}`}>
                 <div className={`${classes.service__featured}`}>
                     <p>Our featured Services</p>
@@ -46,7 +49,7 @@ const Services = () => {
                     </div>
                 </div>
                 <div className={`${classes.service__image}`}>
-                    <img src='/software-development1.png' alt="me" width="100%" height="auto"/>
+                    <img src='/sdProcess.png' alt="me" width="80%" height="auto"/>
                 </div>
             </div>
         </div>

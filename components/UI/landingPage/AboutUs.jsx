@@ -23,7 +23,7 @@ const AboutUs = () => {
                 </p>
             </div>
             <div className={`${classes.about__images}`}>
-                <img src='/aboutus1.jpg' alt="me" width="100%" height="auto"/>
+                <img src='/aboutUs.png' alt="me" width="100%" height="auto"/>
 
             </div>
         </div>

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Link, animateScroll as scroll } from "react-scroll";
 import {Container} from 'reactstrap';
 import classes from './header.module.css';
+ import {FaBars} from 'react-icons/fa'
 
 const NAV_LINK =[
   {
@@ -38,6 +39,7 @@ const Header = () => {
   const [textColor, setTextColor] = useState('white');
   const [shadow, setShadow]= useState('');
   const [logo, setLogo] = useState('/texuslogoWhite.png');
+  const [mobile, setMobile] = useState(false);
 
   useEffect(()=>{
     const changeColor = () =>{
@@ -81,8 +83,25 @@ const Header = () => {
                 Free Quote
               </Link>
             </div>
-
         </div>
+        <div className={`${classes.nav__wrapper_mobile}`}>
+            <img src={logo} alt="texus" width="25%" height="auto"/>
+            <FaBars style={{color: `${textColor}`, cursor:"pointer"}} onClick={()=>setMobile(!mobile)}/>
+        </div>
+        {mobile && <div className={`${classes.nav__menu_mobile}`}>
+              {NAV_LINK.map((item,index)=>(
+                <div key={index}>
+                  <Link style={{color:"black"}}  smooth={true} activeClass="active"
+                  onClick={()=>setMobile(!mobile)}
+                  to={item.path}
+                  spy={true}
+                  offset={-90}
+                  duration={200}>
+                  {item.display}</Link>
+                </div>
+              ))}
+
+            </div> }
       </Container>
     </header>
   )

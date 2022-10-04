@@ -33,9 +33,6 @@ const LandingPage = () => {
             autoStart: true,
             loop: true,
           }}
-            // onInit={(typewriter)=>{
-            //   typewriter.typeString("SDLC.").pauseFor(2000).deleteAll().typeString("Inovation.").start();
-            // }}
           /></h1>
           
             <p>Texus is a family of Gold class Software Engineers</p>

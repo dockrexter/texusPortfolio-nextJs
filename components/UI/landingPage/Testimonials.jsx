@@ -29,6 +29,9 @@ const Testimonial = () => {
   return (
     <div className={`${classes.testimonial_main}`}>
       <h1>Testimonials</h1>
+      <hr style={{ borderTop: "3px solid #008bc9",
+  width: "100px",
+  margin: "1rem auto auto auto"}}/>
     <div className={`${classes.app__testimonial_main}`} >
       {testimonials.length && (
         <>

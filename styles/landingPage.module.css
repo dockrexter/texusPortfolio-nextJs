@@ -4,6 +4,7 @@
     /* background: rgb(48,18,117); */
     /* background: linear-gradient(168deg, rgba(48,18,117,1) 35%, rgba(0,139,201,1) 100%); */
     margin-bottom: 5rem;
+    z-index: -500;
 
     }
 .particles{
@@ -12,22 +13,27 @@
 }
    
 .hero__main{
-    display: flex;
-    justify-content: space-around;   
+    display: flex; 
     }
 .hero__text{
+    padding: 1rem;
     max-width: 550px;
-    margin: 16rem 0 2rem 0;
+    margin: 16rem 0 0 3rem;
     /* margin-left: auto; */
 }
 .hero__text h1{
     color: white;
-    font-size: 75px;
+    font-size: 70px;
     /* color: #ffffff; */
     
     
 
 }
+@media screen and (max-width: 1000px) {
+    .hero__text h1{
+        font-size: 50px;
+    }
+  }
 .hero__text p{
     color: white;
     font-size: 15px;

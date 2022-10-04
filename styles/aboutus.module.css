@@ -1,7 +1,7 @@
 .about__main{
     justify-content: center;
     text-align: center;
-    margin-top: 10rem;
+    margin-top: 8rem;
     background: white;
 }
 .divider{
@@ -11,26 +11,27 @@
 }
 .about__content{
     display: flex;
-    justify-content: space-between;
-    align-content: center;
-    margin-top: 1rem;
+    justify-content: space-evenly;
+    align-items: center;
     padding: 1rem;  
   }
 @media screen and (max-width: 1000px) {
   .about__content{
       flex-direction: column;
+      justify-content: center;
+      align-items: center;
   }
 }
 .about__text p{
-  margin-top: 2rem;
+  margin-top: 0.5rem;
 }
 .about__text{
-    max-width: 50%;
+    max-width: 40%;
     text-align: left;
 }
 @media screen and (max-width: 1000px) {
   .about__text{
-      max-width: 100%;
+      max-width: 80%;
       text-align: center;
   }
 }
@@ -58,8 +59,8 @@
   } */
   
 .about__images{
-    max-width: 50%;
-    padding: 1rem;
+    max-width: 45%;
+    padding: 2rem;
     /* -webkit-animation: about__images  1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 	        animation: about__images 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both; */
 

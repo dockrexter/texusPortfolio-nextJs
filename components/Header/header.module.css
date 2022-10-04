@@ -9,6 +9,28 @@
     z-index: 1030;
 }
 
+.nav__menu_mobile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+    border-radius: 15px;
+    row-gap: 1rem;
+    background-color: #ffffff;
+    float: right;
+    transition: 1s ease-in-out;
+}
+.nav__wrapper_mobile{
+    display: none;
+}
+@media screen and (max-width: 1000px) {
+    .nav__wrapper_mobile{
+        padding: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+  }
 .nav__wrapper{
     display: flex;
     align-items: center;
@@ -20,7 +42,14 @@
         display: none;
     }
   }
-
+  .nav__menu_mobile a{
+    color: black;
+    font-weight: 500;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: .3s;
+    cursor: pointer;
+}
 .nav__menu{
     display: flex;
     align-items: center;

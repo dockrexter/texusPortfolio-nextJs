@@ -12,11 +12,11 @@ const Footer = () => {
         <div className={`${classes.footer_row}`}>
           <div className={`${classes.footer_column}`}>
             <h3 style={{color: '#00b0ee'}}>TEXUS.</h3>
-            <span style={{marginTop:'20px'}}>UM 46 Model Town Link Road, Lahore</span>
+            <span style={{margin:'20px 0px'}}>UM 46 Model Town Link Road, Lahore</span>
             <br/>
-            <span style={{marginTop:'20px'}}><strong>Phone:</strong> <span>{" "}+92-3114537947</span></span>
+            <span style={{margin:'20px 0px'}}><strong>Phone:</strong> <span>{" "}+92-3114537947</span></span>
             <br/>
-            <span style={{marginTop:'20px'}}><strong>Email:</strong> <span>{" "}info@texus.co.uk</span></span>
+            <span style={{margin:'20px 0px'}}><strong>Email:</strong> <span>{" "}info@texus.co.uk</span></span>
             <div className={`${classes.social_icons}`}>
               <div>
                 <BsFacebook size={30}/>
