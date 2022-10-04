@@ -95,8 +95,6 @@ className={`${classes.app__work_filter_item} ${classes.app__work_filter_item} ${
                     </motion.div>
                 </div>
                     <h4>{work.title}</h4>
-                    
-
                     <div className={`${classes.app__work_tag}`}>
                     {/* <p className="p-text">{work.tags[0]}</p> */}
                     </div>
