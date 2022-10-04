@@ -94,15 +94,12 @@ className={`${classes.app__work_filter_item} ${classes.app__work_filter_item} ${
                         </a>
                     </motion.div>
                 </div>
-
-                <div className={`${classes.app__work_content}`}>
-                    <h4 className="bold-text">{work.title}</h4>
-                    <p className="p-text" style={{ marginTop: 10 }}>{work.description}</p>
+                    <h4>{work.title}</h4>
+                    
 
                     <div className={`${classes.app__work_tag}`}>
                     {/* <p className="p-text">{work.tags[0]}</p> */}
                     </div>
-                </div>
             </div>
         ))}
     </motion.div>

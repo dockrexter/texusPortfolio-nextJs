@@ -1,5 +1,6 @@
 .work__main{
     text-align: center;
+    margin-top: 5rem;
 }
 
 .app__works {
@@ -147,13 +148,14 @@
     .app__work_content {
     padding: 0.5rem;
     width: 100%;
-    position: relative;
+    height: 30vh;
     flex-direction: column;
+    text-overflow: hidden;
     
     }
     .app__work_content h4 {
         margin-top: 1rem;
-        line-height: 1.5;
+        line-height: 1;
     }
     @media screen and (min-width: 2000px) {
         .app__work_content h4{ margin-top: 3rem; }

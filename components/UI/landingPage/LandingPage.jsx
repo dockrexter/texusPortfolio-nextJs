@@ -29,7 +29,7 @@ const LandingPage = () => {
           <h1 style={{color:"#00b0ee"}}><Typewriter
           style={{color: "blue"}}
           options={{
-            strings: ['SDLC.', 'Inovation.'],
+            strings: ['SDLC.', 'Innovation.'],
             autoStart: true,
             loop: true,
           }}
