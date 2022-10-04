@@ -13,10 +13,11 @@ export default function Home() {
     {/* <Counter/> */}
     <SoftwarePlanning/>
     <AboutUs/>
+    <Services/>
     <Products/>
     <Testimonial/>
    
-    <Services/>
+    
   </Fragment>
     
   )

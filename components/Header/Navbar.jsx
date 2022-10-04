@@ -7,13 +7,14 @@ const NAV_LINK =[
     path: 'home',
     display: 'Home',
   },
-  {
-    path: 'about',
-    display: 'About Us',
-  },
+  
   {
     path: 'process',
     display: 'Process',
+  },
+  {
+    path: 'about',
+    display: 'About Us',
   },
   {
     path: 'services',
