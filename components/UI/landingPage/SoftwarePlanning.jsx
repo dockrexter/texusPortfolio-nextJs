@@ -1,7 +1,10 @@
-import React from 'react'
+import React, {useState} from 'react'
 import classes from '../../../styles/softwareplanning.module.css'
+import { motion } from 'framer-motion';
+import { AppWrap, MotionWrap } from '../../Wrappers';
 
 const SoftwarePlanning = () => {
+    const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
   return (
     <div className={`${classes.sp__box_main}`} id='process'>
         <div className={`${classes.sp__box_mainText}`}>
@@ -10,6 +13,9 @@ const SoftwarePlanning = () => {
   width: "100px",
   margin: "1rem auto auto auto"}}/>
         </div>
+        <motion.div
+    animate={animateCard}
+    transition={{ duration: 0.5, delayChildren: 0.5 }}>
         <div className={`${classes.sp__main}`}>
             <div className={`${classes.sp__div1}`}>
                 <div>
@@ -37,8 +43,13 @@ const SoftwarePlanning = () => {
 
             </div>
         </div>
+        </motion.div>
     </div>
   )
 }
 
-export default SoftwarePlanning
+export default AppWrap(
+    MotionWrap(SoftwarePlanning, `${classes.sp__box_main}`),
+    'process',
+    'app__primarybg',
+  );

@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 //import { AiFillEye, AiFillGithub } from 'react-icons/ai';
+import {SiWebmoney} from 'react-icons/si'
+import { MdDescription} from 'react-icons/md'
 import { motion } from 'framer-motion';
 
 //import { AppWrap, MotionWrap } from '../../wrapper';
@@ -16,6 +18,7 @@ useEffect(() => {
 const query = '*[_type == "works"]';
 
 client.fetch(query).then((data) => {
+    console.log(data);
 setWorks(data);
 setFilterWork(data);
 });
@@ -44,11 +47,11 @@ return (
   margin: "1rem auto auto auto"}}/>
 
 <div className={`${classes.app__work_filter}`}>
-{['UI/UX', 'Web App', 'Mobile App', 'React JS', 'All'].map((item, index) => (
+{['UI/UX', 'Web App', 'Mobile App', 'All'].map((item, index) => (
 <div
 key={index}
 onClick={() => handleWorkFilter(item)}
-className={`${classes.app__work_filter_item} ${classes.app__work_filter_item} ${activeFilter === item ? classes.item_active : ''}`}
+className={[classes.app__work_filter_item, classes.app__work_filter_item, activeFilter === item ? classes.item_active : ''].join(" ")}
 >
 {item}
 </div>
@@ -79,7 +82,7 @@ className={`${classes.app__work_filter_item} ${classes.app__work_filter_item} ${
                 transition={{ duration: 0.25 }}
                 className={`${classes.app__flex}`}
                 >
-                {/* <AiFillEye /> */}
+                    <SiWebmoney style={{color: 'blue'}}/>
                 </motion.div>
                 </a>
                     <a href={work.codeLink} target="_blank" rel="noreferrer">
@@ -89,14 +92,14 @@ className={`${classes.app__work_filter_item} ${classes.app__work_filter_item} ${
                     transition={{ duration: 0.25 }}
                     className={`${classes.app__flex}`}
                     >
-                            {/* <AiFillGithub /> */}
+                           <MdDescription style={{color: 'blue'}}/>
                             </motion.div>
                         </a>
                     </motion.div>
                 </div>
                     <h4>{work.title}</h4>
                     <div className={`${classes.app__work_tag}`}>
-                    {/* <p className="p-text">{work.tags[0]}</p> */}
+                    {/* <p className="p-text">{work.tags}</p> */}
                     </div>
             </div>
         ))}

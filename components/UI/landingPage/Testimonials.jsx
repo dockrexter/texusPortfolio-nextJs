@@ -3,6 +3,7 @@ import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
 import { motion } from 'framer-motion';
 import { urlFor, client } from '../../clientSanity';
 import classes from '../../../styles/testimonials.module.css'
+import { AppWrap, MotionWrap } from '../../Wrappers';
 
 const Testimonial = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -15,15 +16,10 @@ const Testimonial = () => {
 
   useEffect(() => {
     const query = '*[_type == "testimonials"]';
-    const brandsQuery = '*[_type == "brands"]';
-
     client.fetch(query).then((data) => {
       setTestimonials(data);
     });
 
-    client.fetch(brandsQuery).then((data) => {
-      setBrands(data);
-    });
   }, []);
 
   return (
@@ -31,7 +27,7 @@ const Testimonial = () => {
       <h1>Testimonials</h1>
       <hr style={{ borderTop: "3px solid #008bc9",
   width: "100px",
-  margin: "1rem auto auto auto"}}/>
+  margin: "1rem auto 5rem auto"}}/>
     <div className={`${classes.app__testimonial_main}`} >
       {testimonials.length && (
         <>
@@ -74,4 +70,8 @@ const Testimonial = () => {
   );
 };
 
-export default Testimonial;
+export default AppWrap(
+  MotionWrap(Testimonial, `${classes.testimonial_main}`),
+  "testimonial",
+  'app__primarybg',
+);

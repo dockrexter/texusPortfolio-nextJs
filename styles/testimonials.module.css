@@ -1,5 +1,6 @@
 .testimonial_main{
   text-align: center;
+  margin-top: 1rem;
   
 }
 
@@ -20,7 +21,7 @@
   
   
   .app__testimonial_item {
-    width: 60%;
+    width: 80%;
     min-height: 320px;
     background-color: white;
     display: flex;

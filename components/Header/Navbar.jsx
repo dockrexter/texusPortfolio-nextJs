@@ -12,13 +12,18 @@ const NAV_LINK =[
     path: 'process',
     display: 'Process',
   },
-  {
-    path: 'about',
-    display: 'About Us',
-  },
+  
   {
     path: 'services',
     display: 'Services',
+  },
+  {
+    path: 'product',
+    display: 'Products',
+  },
+  {
+    path: 'about',
+    display: 'About Us',
   },
   {
     path: 'blog',
@@ -27,7 +32,7 @@ const NAV_LINK =[
   },
   
   {
-    path: 'contactus',
+    path: 'contact',
     display: 'Contact Us',
   },
 ]
@@ -59,14 +64,13 @@ const Navbar = () => {
   }, [])
   return (
     <div className={`${classes.Navbar}`} style={{background: `${color}`, boxShadow:`${shadow}`, padding: '1rem'}}>
-      <img src={logo} alt="texus" width="150px" height="auto" style={{marginLeft: "3rem"}}/>
+      <img src={logo} alt="texus" width="150px" height="auto"/>
       <div className={[classes.nav_items, isOpen && classes.open].join(" ")}>
       {NAV_LINK.map((item,index)=>(
                   <Link key={index}  onClick={()=>setIsOpen(false)} style={{color:isOpen? '#000000' : `${textColor}` }}  smooth={true} activeClass="active"
                   to={item.path}
                   spy={true}
-                  offset={-90}
-                  duration={200}>
+                  duration={300}>
                   {item.display}</Link>
 
               ))}

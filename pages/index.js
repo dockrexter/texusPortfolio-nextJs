@@ -6,16 +6,22 @@ import Services from '../components/UI/landingPage/Services';
 import Counter from '../components/UI/landingPage/Counter';
 import Products from '../components/UI/landingPage/Products';
 import Testimonial from '../components/UI/landingPage/Testimonials';
+import OurTeam from '../components/UI/landingPage/OurTeam';
+import Product from '../components/containrs/Product';
+import Contact from '../components/contactus/Contact';
 
 export default function Home() {
   return (<Fragment>
     <LandingPage/> 
     {/* <Counter/> */}
     <SoftwarePlanning/>
-    <AboutUs/>
     <Services/>
-    <Products/>
+    {/* <Products/> */}
+    <Product/>
     <Testimonial/>
+    <AboutUs/>
+    <OurTeam/>
+    <Contact/>
    
     
   </Fragment>

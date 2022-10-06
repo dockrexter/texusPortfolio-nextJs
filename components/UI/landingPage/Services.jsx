@@ -1,5 +1,6 @@
 import React from 'react'
 import classes from '../../../styles/services.module.css'
+import { AppWrap, MotionWrap } from '../../Wrappers'
 
 const SERVICES = [
     {
@@ -38,8 +39,7 @@ const Services = () => {
             <div className={`${classes.service__main}`}>
                 <div className={`${classes.service__featured}`}>
                     <p>Our featured Services</p>
-                    <h1>Software Developement Services</h1>
-                    <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices Lorem Ipsum is simply dummy text.</span>
+                    <h1 style={{marginBottom: "2rem"}}>Software Developement Services</h1>
                     <div className={`${classes.service__featured__main}`}>
                         {SERVICES.map((data, index)=>
                             <div key={index} className={`${classes.service__featured__sub}`}>
@@ -56,4 +56,8 @@ const Services = () => {
   )
 }
 
-export default Services
+export default AppWrap(
+    MotionWrap(Services, `${classes.service}`),
+    'services',
+    'app__primarybg',
+  );

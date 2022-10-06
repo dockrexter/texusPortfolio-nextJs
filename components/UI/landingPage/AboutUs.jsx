@@ -1,5 +1,6 @@
 import React from 'react'
 import classes from '../../../styles/aboutus.module.css'
+import { AppWrap, MotionWrap } from '../../Wrappers';
 
 const AboutUs = () => {
   return (
@@ -30,5 +31,8 @@ const AboutUs = () => {
     </div>
   )
 }
-
-export default AboutUs
+export default AppWrap(
+    MotionWrap(AboutUs, `${classes.about__main}`),
+    'about',
+    'app__primarybg',
+  );
