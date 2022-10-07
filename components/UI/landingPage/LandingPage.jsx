@@ -3,6 +3,7 @@ import classes from '../../../styles/landingPage.module.css'
 import * as THREE from 'three'
 import GLOBE from 'vanta/dist/vanta.globe.min.js'
 import Typewriter from 'typewriter-effect'
+import {motion} from 'framer-motion'
 
 
 const LandingPage = () => {
@@ -21,6 +22,7 @@ const LandingPage = () => {
   },[vantaEffect])
   
   return (
+    
     <div className={`${classes.hero}`} id='home' ref={vantaRef}>
       
       <div className={`${classes.hero__main}`}>

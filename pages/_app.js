@@ -6,9 +6,19 @@ import "slick-carousel/slick/slick-theme.css";
 import Layout from '../components/Layout/Layout';
 
 import { useEffect } from 'react';
+import LoaderScreen from '../components/loader/LoaderScreen';
+import { useState } from 'react';
+import { motion } from 'framer-motion';
 
 
 function MyApp({ Component, pageProps }) {
+  const [loading, setLoading] = useState(true);
+
+
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+
   useEffect(()=>{
     const threeScript  = document.createElement('script');
     threeScript.setAttribute('id', 'threeScript');
@@ -22,9 +32,17 @@ function MyApp({ Component, pageProps }) {
     };
   },[])
   return (
-  <Layout>
-      <Component {...pageProps}/>
-  </Layout>
+    <>
+        <LoaderScreen loader={loading}/>
+      {!loading &&(<motion.div
+          initial={{ opacity: 0}}
+          whileInView={{ y: [100,90,80,60, 50,40,30,20,10, 0,-10], opacity: 1 }}
+          transition={{ duration: 0.5 }}>
+          <Layout>
+            <Component {...pageProps}/>
+          </Layout>
+    </motion.div>)}
+  </>
   );
 }
 
