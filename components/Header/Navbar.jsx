@@ -38,7 +38,7 @@ const NAV_LINK =[
 ]
 
 
-const Navbar = () => {
+const NavbarNew = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [color, setColor] = useState('transparent');
   const [textColor, setTextColor] = useState('white');
@@ -47,23 +47,25 @@ const Navbar = () => {
   useEffect(()=>{
     const changeColor = () =>{
     if(window.scrollY >= 90){
-      setColor('#ffffff');
+      setColor('white');
       setTextColor('#000000')
       setShadow('rgba(0, 0, 0, 0.24) 0px 3px 8px');
       setLogo('/texusLogo.png');
+      console.log("if")
     }else{
       setColor('transparent');
       setTextColor('white');
       setShadow("");
       setIsOpen(false)
       setLogo('/texuslogoWhite.png');
+      console.log("else");
       
       
     }};
     window.addEventListener('scroll', changeColor);
   }, [])
   return (
-    <div className={`${classes.Navbar}`} style={{background: `${color}`, boxShadow:`${shadow}`, padding: '1rem'}}>
+    <div className={`${classes.NavbarMain}`} style={{background: `${color}`, boxShadow:`${shadow}`, padding: '1rem'}}>
       <img src={logo} alt="texus" width="150px" height="auto"/>
       <div className={[classes.nav_items, isOpen && classes.open].join(" ")}>
       {NAV_LINK.map((item,index)=>(
@@ -92,4 +94,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default NavbarNew;

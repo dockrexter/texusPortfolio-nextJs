@@ -33,14 +33,14 @@ function MyApp({ Component, pageProps }) {
   },[])
   return (
     <>
-        <LoaderScreen loader={loading}/>
+        {loading && <LoaderScreen loader={loading}/>}
       {!loading &&(<motion.div
           initial={{ opacity: 0}}
-          whileInView={{ y: [100,90,80,60, 50,40,30,20,10, 0,-10], opacity: 1 }}
+          whileInView={{ y: [100,90,80,60, 50,40,30,20,10, 0,0], opacity: 1 }}
           transition={{ duration: 0.5 }}>
-          <Layout>
+          {!loading && <Layout>
             <Component {...pageProps}/>
-          </Layout>
+          </Layout>}
     </motion.div>)}
   </>
   );
