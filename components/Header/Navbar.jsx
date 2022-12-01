@@ -72,7 +72,13 @@ const NavbarNew = () => {
   }, [])
   return (
     <div className={`${classes.NavbarMain}`} style={{background: `${color}`, boxShadow:`${shadow}`, padding: '1rem'}}>
-      <img src={logo} alt="texus" width="150px" height="auto"/>
+      <Link smooth={true} activeClass="active"
+                    to={'home'}
+                    spy={true}
+                    duration={300} style={{cursor: 'pointer' }}>
+        <img src={logo} alt="texus" width="150px" height="auto"/>
+      </Link>
+
       <div className={[classes.nav_items, isOpen && classes.open].join(" ")}>
       {NAV_LINK.map((item,index)=>(
                     <Link key={index}  onClick={()=>handleClickLink(item)} style={{color:isOpen? '#000000' : `${textColor}` }}  smooth={true} activeClass="active"
