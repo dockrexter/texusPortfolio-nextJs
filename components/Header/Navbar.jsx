@@ -26,8 +26,8 @@ const NAV_LINK =[
     display: 'About Us',
   },
   {
-    path: 'blog',
-    display: 'Blog',
+    path: 'https://careers.texus.co.uk',
+    display: 'Careers',
 
   },
   
@@ -44,6 +44,12 @@ const NavbarNew = () => {
   const [textColor, setTextColor] = useState('white');
   const [shadow, setShadow]= useState('');
   const [logo, setLogo] = useState('/texuslogoWhite.png');
+  const handleClickLink = (item) => {
+    if(item.path === "https://careers.texus.co.uk"){
+      window.open("https://careers.texus.co.uk", '_self');
+    }
+    setIsOpen(false);
+  }
   useEffect(()=>{
     const changeColor = () =>{
     if(window.scrollY >= 90){
@@ -69,11 +75,11 @@ const NavbarNew = () => {
       <img src={logo} alt="texus" width="150px" height="auto"/>
       <div className={[classes.nav_items, isOpen && classes.open].join(" ")}>
       {NAV_LINK.map((item,index)=>(
-                  <Link key={index}  onClick={()=>setIsOpen(false)} style={{color:isOpen? '#000000' : `${textColor}` }}  smooth={true} activeClass="active"
-                  to={item.path}
-                  spy={true}
-                  duration={300}>
-                  {item.display}</Link>
+                    <Link key={index}  onClick={()=>handleClickLink(item)} style={{color:isOpen? '#000000' : `${textColor}` }}  smooth={true} activeClass="active"
+                    to={item.path}
+                    spy={true}
+                    duration={300}>
+                    {item.display}</Link>
 
               ))}
       </div>
