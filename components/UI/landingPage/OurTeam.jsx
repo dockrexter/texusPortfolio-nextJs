@@ -29,7 +29,7 @@ const OurTeam = () => {
         <div className={`${classes.ot__members_main}`}>
             {members.map((data, index) => 
             <div key={index} className={`${classes.ot_card}`}>
-                <img src={urlFor(data.imageUrl)} alt="John" style={{width:"100%", borderRadius: "10px"}} />
+                <img src={urlFor(data.imageUrl)} alt={data.name} style={{width:"100%", height: "60%" ,borderRadius: "10px"}} />
                 <h4 style={{margin: "5px"}}>{data?.name}</h4>
                 <p className={`${classes.ot__title}`}>{data?.position}</p>
                 <p>{data?.company}</p>

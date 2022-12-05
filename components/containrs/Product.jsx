@@ -44,7 +44,7 @@ const Work = () => {
           margin: "1rem auto auto auto"}}/>
 
       <div className={`${classes.app__work_filter}`}>
-        {['UI/UX', 'Web App', 'Mobile App', 'React JS', 'All'].map((item, index) => (
+        {['UI/UX', 'Web App', 'Mobile App', 'All'].map((item, index) => (
           <div
             key={index}
             onClick={() => handleWorkFilter(item)}
@@ -101,7 +101,7 @@ const Work = () => {
               <p className={`${classes.p_text}`} style={{ marginTop: 10 }}>{work.description}</p>
 
               <div className={[classes.app__work_tag, classes.app__flex].join(" ")}>
-                <p className={`${classes.p_text}`}>{work.tags[0]}</p>
+                {/* <p className={`${classes.p_text}`}>{work.tags[0]}</p> */}
               </div>
             </div>
           </div>
